@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="mn">
+<head>
+    <meta charset="UTF-8">
+    <title>Миний Санхүү - Финтек Төсөл</title>
+    
+    <!-- 🟢 Таны файлын нэр styles.css байгаа тул энд s-тэйгээр холбов -->
+    <link rel="stylesheet" href="styles.css">
+    
+</head>
+<body>
+    <div class="container">
+        <h2>💰 Миний Санхүү / Финтек Төсөл</h2>
+        
+        <div class="balance-board">
+            <h3>Нийт амжилттай орлого: <span id="total-income">0</span> ₮</h3>
+        </div>
+
+        <div class="filters">
+            <button onclick="filterTransactions('ALL')">Бүх гүйлгээ</button>
+            <button onclick="filterTransactions('SUCCESS')">Амжилттай</button>
+            <button onclick="filterTransactions('PENDING')">Хүлээгдэж буй</button>
+        </div>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Гүйлгээний ID</th>
+                    <th>Төрөл</th>
+                    <th>Дүн (₮)</th>
+                    <th>Шимтгэл (1%)</th>
+                    <th>Төлөв</th>
+                </tr>
+            </thead>
+            <tbody id="transaction-rows">
+                <!-- JavaScript-ээр өгөгдөл энд орж ирнэ -->
+            </tbody>
+        </table>
+    </div>
+
+    <!-- 🟢 JavaScript файл зөв холбогдсон байна -->
+    <script src="app.js"></script>
+</body>
+</html>
